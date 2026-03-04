@@ -30,28 +30,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9HYW1lR3JpZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/What-the-CODE/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[/workspaces/What-the-CODE/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/workspaces/What-the-CODE/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/workspaces/What-the-CODE/Components/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ob3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/What-the-CODE/Components/Pages/Sandbox.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9TYW5kYm94LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[/workspaces/What-the-CODE/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/What-the-CODE/Components/Routes.razor]
