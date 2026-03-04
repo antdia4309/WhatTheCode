@@ -1,0 +1,82 @@
+@using WhatTheCode.Models
+
+<div class="game-grid">
+    @for (int row = 0; row < Grid.Rows; row++)
+    {
+        <div class="grid-row">
+            @for (int col = 0; col < Grid.Columns; col++)
+            {
+                int x = col;
+                int y = row;
+                bool isCharacter = (x == Character.X && y == Character.Y);
+                bool isVisited   = Grid.Visited[x, y];
+
+                <div class="grid-cell @(isCharacter ? "cell-character" : "") @(isVisited && !isCharacter ? "cell-visited" : "")">
+                    @if (isCharacter)
+                    {
+                        <span class="character-icon @GetFacingClass()">🤖</span>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public Grid Grid { get; set; } = default!;
+    [Parameter] public Character Character { get; set; } = default!;
+
+    private string GetFacingClass() => Character.Facing switch
+    {
+        Direction.Up    => "face-up",
+        Direction.Right => "face-right",
+        Direction.Down  => "face-down",
+        Direction.Left  => "face-left",
+        _               => ""
+    };
+}
+
+<style>
+    .game-grid {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 2px;
+        background: #1a1a2e;
+        padding: 8px;
+        border-radius: 8px;
+        border: 2px solid #00d4ff;
+    }
+
+    .grid-row {
+        display: flex;
+        gap: 2px;
+    }
+
+    .grid-cell {
+        width: 56px;
+        height: 56px;
+        background: #16213e;
+        border: 1px solid #0f3460;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        transition: background 0.2s ease;
+    }
+
+    .cell-visited {
+        background: #0f3460;
+    }
+
+    .cell-character {
+        background: #00d4ff22;
+        border-color: #00d4ff;
+    }
+
+    /* Rotation based on facing direction */
+    .face-up    { display: inline-block; transform: rotate(-90deg); }
+    .face-right { display: inline-block; transform: rotate(0deg);   }
+    .face-down  { display: inline-block; transform: rotate(90deg);  }
+    .face-left  { display: inline-block; transform: rotate(180deg); }
+</style>
